@@ -4,13 +4,14 @@
 #
 Name     : isort
 Version  : 4.2.15
-Release  : 6
+Release  : 7
 URL      : https://pypi.debian.net/isort/isort-4.2.15.tar.gz
 Source0  : https://pypi.debian.net/isort/isort-4.2.15.tar.gz
 Summary  : A Python utility / library to sort Python imports.
 Group    : Development/Tools
 License  : MIT
 Requires: isort-bin
+Requires: isort-legacypython
 Requires: isort-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -30,9 +31,18 @@ Group: Binaries
 bin components for the isort package.
 
 
+%package legacypython
+Summary: legacypython components for the isort package.
+Group: Default
+
+%description legacypython
+legacypython components for the isort package.
+
+
 %package python
 Summary: python components for the isort package.
 Group: Default
+Requires: isort-legacypython
 
 %description python
 python components for the isort package.
@@ -46,12 +56,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1496862702
+export SOURCE_DATE_EPOCH=1505004209
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1496862702
+export SOURCE_DATE_EPOCH=1505004209
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -66,7 +76,10 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 /usr/bin/isort
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*

@@ -4,7 +4,7 @@
 #
 Name     : isort
 Version  : 4.3.4
-Release  : 17
+Release  : 18
 URL      : https://pypi.debian.net/isort/isort-4.3.4.tar.gz
 Source0  : https://pypi.debian.net/isort/isort-4.3.4.tar.gz
 Summary  : A Python utility / library to sort Python imports.

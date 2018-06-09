@@ -4,14 +4,13 @@
 #
 Name     : isort
 Version  : 4.3.4
-Release  : 20
+Release  : 21
 URL      : https://pypi.debian.net/isort/isort-4.3.4.tar.gz
 Source0  : https://pypi.debian.net/isort/isort-4.3.4.tar.gz
 Summary  : A Python utility / library to sort Python imports.
 Group    : Development/Tools
 License  : MIT
 Requires: isort-bin
-Requires: isort-legacypython
 Requires: isort-python3
 Requires: isort-python
 Requires: futures
@@ -69,12 +68,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1518531101
+export SOURCE_DATE_EPOCH=1528573317
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1518531101
+export SOURCE_DATE_EPOCH=1528573317
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

@@ -1,5 +1,5 @@
 PKG_NAME := isort
-URL = https://files.pythonhosted.org/packages/ea/a7/af4a78fb8676e831d7d43396b072c24f7e12ec65047f7359bad42b25cbea/isort-4.3.8.tar.gz
+URL = https://files.pythonhosted.org/packages/35/c5/025aaa76f0f337e3d91197973c42b4e807fa6dd509da70e87053d85ce278/isort-4.3.9.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

@@ -4,7 +4,7 @@
 #
 Name     : isort
 Version  : 4.3.13
-Release  : 36
+Release  : 37
 URL      : https://files.pythonhosted.org/packages/fa/d3/7542bd894dc661124b37e046abeda5a4d977bcf4fe218f6be3d1a2a5d156/isort-4.3.13.tar.gz
 Source0  : https://files.pythonhosted.org/packages/fa/d3/7542bd894dc661124b37e046abeda5a4d977bcf4fe218f6be3d1a2a5d156/isort-4.3.13.tar.gz
 Summary  : A Python utility / library to sort Python imports.

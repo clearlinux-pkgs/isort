@@ -4,7 +4,7 @@
 #
 Name     : isort
 Version  : 4.3.20
-Release  : 46
+Release  : 47
 URL      : https://files.pythonhosted.org/packages/f1/84/5d66ddbe565e36682c336c841e51430384495b272c622ac229029f671be2/isort-4.3.20.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f1/84/5d66ddbe565e36682c336c841e51430384495b272c622ac229029f671be2/isort-4.3.20.tar.gz
 Summary  : A Python utility / library to sort Python imports.
@@ -15,12 +15,10 @@ Requires: isort-license = %{version}-%{release}
 Requires: isort-python = %{version}-%{release}
 Requires: isort-python3 = %{version}-%{release}
 Requires: appdirs
-Requires: futures
 Requires: pipreqs
 Requires: toml
 BuildRequires : appdirs
 BuildRequires : buildreq-distutils3
-BuildRequires : futures
 BuildRequires : pipreqs
 BuildRequires : toml
 
@@ -71,7 +69,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1557931801
+export SOURCE_DATE_EPOCH=1559111758
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm

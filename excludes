@@ -1,2 +1,8 @@
 # This file contains the output files that need %exclude. Full path
 # names, one per line.
+/usr/lib/python3.8/site-packages/tests/__pycache__/conftest.cpython-38.pyc
+/usr/lib/python3.8/site-packages/tests/conftest.py
+/usr/lib/python3.8/site-packages/tests/__pycache__/test_exceptions.cpython-38.pyc
+/usr/lib/python3.8/site-packages/tests/__pycache__/test_parse.cpython-38.pyc
+/usr/lib/python3.8/site-packages/tests/test_exceptions.py
+/usr/lib/python3.8/site-packages/tests/test_parse.py

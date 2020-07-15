@@ -4,7 +4,7 @@
 #
 Name     : isort
 Version  : 5.1.0
-Release  : 61
+Release  : 62
 URL      : https://files.pythonhosted.org/packages/9b/e2/3255d6998703c0fdfa6b2cd32a02172520928f3270b2932e30afd63baa6c/isort-5.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/9b/e2/3255d6998703c0fdfa6b2cd32a02172520928f3270b2932e30afd63baa6c/isort-5.1.0.tar.gz
 Summary  : A Python utility / library to sort Python imports.
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1594824131
+export SOURCE_DATE_EPOCH=1594826595
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,6 +86,13 @@ python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
+## Remove excluded files
+rm -f %{buildroot}/usr/lib/python3.8/site-packages/tests/__pycache__/conftest.cpython-38.pyc
+rm -f %{buildroot}/usr/lib/python3.8/site-packages/tests/conftest.py
+rm -f %{buildroot}/usr/lib/python3.8/site-packages/tests/__pycache__/test_exceptions.cpython-38.pyc
+rm -f %{buildroot}/usr/lib/python3.8/site-packages/tests/__pycache__/test_parse.cpython-38.pyc
+rm -f %{buildroot}/usr/lib/python3.8/site-packages/tests/test_exceptions.py
+rm -f %{buildroot}/usr/lib/python3.8/site-packages/tests/test_parse.py
 
 %files
 %defattr(-,root,root,-)
